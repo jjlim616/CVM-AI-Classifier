@@ -39,7 +39,7 @@ Additionally, the system provides detailed confidence scores for each CVM stage:
 
 ### 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/CVM-AI-Classifier.git
+git clone https://github.com/jjlim616/CVM-AI-Classifier.git
 cd CVM-AI-Classifier
 ```
 
