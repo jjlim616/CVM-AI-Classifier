@@ -1,58 +1,50 @@
-# CVM-AI-Classifier
+# CVM Studio
 
-An AI-driven system for automated cervical vertebral maturation (CVM) stage classification.
+Local research demo for cervical vertebral maturation classification. Upload a
+cropped lateral cephalometric X-ray, pick a model, and inspect six class scores
+plus Grad-CAM.
 
-## Overview
+Originally a Streamlit final-year project; the UI is now Vue 3 + FastAPI.
+Training is unchanged. **Not for clinical diagnosis.**
 
-This project implements a deep learning-based system for automatically classifying cervical vertebral maturation stages from lateral cephalometric radiographs. The system provides accurate CVM stage predictions with visualization capabilities through Grad-CAM heatmaps and confidence scores for clinical interpretation.
+![CS1](docs/screenshots/cs1.png)
 
-## Dataset
+![CS3](docs/screenshots/cs3.png)
 
-This project uses the **CVM-900** dataset. For more details on the dataset, including its citation, please refer to the [DATASET.md](./DATASET.md) file.
+![CS5](docs/screenshots/cs5o.png)
 
-## Features
+![CS6](docs/screenshots/cs6o.png)
 
-- Automated CVM stage classification (CS1-CS6)
-- Interactive web interface for image analysis
-- Grad-CAM heatmap visualization
-- Confidence scoring for predictions
-- Combined view with heatmap overlay
+## Run
 
-## Demo
-
-The application provides a comprehensive analysis interface for cervical vertebral maturation classification:
-
-![User Interface](/screenshots/interface.png)
-*Figure 1: Main interface showing image upload and analysis components*
-
-The system provides three key visualizations:
-1. Original radiographic image
-2. Grad-CAM heatmap showing regions of interest
-3. Combined view with heatmap overlay
-
-Additionally, the system provides detailed confidence scores for each CVM stage:
-
-![Confidence Scores](/screenshots/confidence-scores.png)
-*Figure 2: Confidence scores for each CVM stage classification*
-
-## Installation and Usage
-
-### 1. Clone the repository:
-```bash
-git clone https://github.com/jjlim616/CVM-AI-Classifier.git
-cd CVM-AI-Classifier
-```
-
-### 2. Install required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the application:
-```bash
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+npm --prefix frontend ci
+npm --prefix frontend run build
 python main.py
 ```
 
+Open http://127.0.0.1:8000
+
+## Models
+
+Weights are not in Git. Put the `.pth` files in `artifacts/checkpoints/`:
+
+| File | Dropdown |
+| --- | --- |
+| `convnext-small.pth` | ConvNeXt Small |
+| `densenet121.pth` | DenseNet121 |
+| `mobilenet-v2.pth` | MobileNetV2 |
+| `efficientnet-b1.pth` | EfficientNet-B1 |
+
+The UI lists whatever is present. Nothing is downloaded at runtime.
+
+## Dataset
+
+CVM-900 is not in this repository. Citation: [DATASET.md](DATASET.md).
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Project code: [MIT](LICENSE). Dataset and model rights are separate.
