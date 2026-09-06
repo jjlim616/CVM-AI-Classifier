@@ -13,6 +13,13 @@
 *.ckpt*
 *.safetensors
 
+# Local notes
+requirements-lock.txt
+docs/checkpoints.json
+docs/models.md
+docs/revamp-plan.md
+docs/validation.md
+
 # Development
 .DS_Store
 __pycache__/
