@@ -1,0 +1,30 @@
+[
+  {
+    "dataset_label": "CS1",
+    "source_filename": "0027.png",
+    "model": "convnext-small",
+    "predicted_stage": "CS1",
+    "selection": "First filename alphabetically in the supplied stage folder; not selected by prediction outcome."
+  },
+  {
+    "dataset_label": "CS3",
+    "source_filename": "0278.png",
+    "model": "convnext-small",
+    "predicted_stage": "CS4",
+    "selection": "First filename alphabetically in the supplied stage folder; not selected by prediction outcome."
+  },
+  {
+    "dataset_label": "CS5",
+    "source_filename": "0589.png",
+    "model": "convnext-small",
+    "predicted_stage": "CS6",
+    "selection": "First filename alphabetically in the supplied stage folder; not selected by prediction outcome."
+  },
+  {
+    "dataset_label": "CS6",
+    "source_filename": "0803.png",
+    "model": "convnext-small",
+    "predicted_stage": "CS6",
+    "selection": "First filename alphabetically in the supplied stage folder; not selected by prediction outcome."
+  }
+]

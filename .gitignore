@@ -1,0 +1,27 @@
+# Weights and dataset — keep local
+/artifacts/*
+!/artifacts/README.md
+/data/
+/legacy/
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.keras
+*.onnx
+*.pb
+*.ckpt*
+*.safetensors
+
+# Development
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.pytest_cache/
